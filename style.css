@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebece4;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+}
+
+.left-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+}
+
+.left-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.left-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.right-section {
+    flex: 1;
+    background: #10233f;
+    padding: 50px 45px;
+    position: relative;
+}
+
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.brand-logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2dd4bf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2dd4bf;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    color: #cbd5e1;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    background: #334155;
+    border: 2px solid #475569;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    background: #3f4f66;
+    border-color: #2dd4bf;
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(45, 212, 191, 0.25);
+}
+
+.form-control::placeholder {
+    color: #64748b;
+}
+
+.invalid-feedback,
+.valid-feedback {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-check-input {
+    background-color: #334155;
+    border-color: #475569;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #2dd4bf;
+    border-color: #2dd4bf;
+}
+
+.form-check-label {
+    color: #cbd5e1;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.form-check-label a {
+    color: #2dd4bf;
+    text-decoration: none;
+}
+
+.form-check-label a:hover {
+    text-decoration: underline;
+}
+
+.btn-create {
+    width: 100%;
+    padding: 14px;
+    background: #2dd4bf;
+    color: #1e293b;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-create:hover {
+    background: #14b8a6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(45, 212, 191, 0.4);
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #ef4444;
+}
+
+.was-validated .form-control:valid {
+    border-color: #10b981;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding: 40px 20px;
+    }
+
+    .logo-text {
+        font-size: 60px;
+    }
+
+    .left-content h2 {
+        font-size: 32px;
+    }
+
+    .right-section {
+        padding: 30px 20px;
+    }
+}
